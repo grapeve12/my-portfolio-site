@@ -69,7 +69,7 @@ export default function Home() {
                 Posts (Debug)
               </Button>
               <Button
-                href="https://github.com/EGU1832"
+                href="https://github.com/grapeve12"
                 target="_blank"
                 rel="noreferrer"
                 variant="outline"
@@ -170,7 +170,7 @@ export default function Home() {
               demoVideo="sg-opengl-2d-affine-transform_demo.webm"
               videoWidth={540}
               videoHeight="auto"
-              github="https://github.com/EGU1832/sg-opengl-2d-affine-transform"
+              github="https://github.com/grapeve12/sg-opengl-2d-affine-transform"
             />
             */}
 
@@ -244,9 +244,9 @@ export default function Home() {
               demoVideo="obsidian-to-github-md_demo.webm"
               videoWidth={448}
               videoHeight="auto"
-              github="https://github.com/EGU1832/obsidian-to-github-md"
+              github="https://github.com/grapeve12/obsidian-to-github-md"
               readmeSummary={`v2.1.0 (Release) — Obsidian-style Markdown is converted and previewed safely with LaTeX & code highlighting.`}
-              website="https://egu1832.github.io/obsidian-to-github-md/"
+              website="https://grapeve12.github.io/obsidian-to-github-md/"
             />
 
             {/* ===================== 2) Dual PDF Viewer ===================== */}
@@ -263,9 +263,9 @@ export default function Home() {
               demoVideo="dual-pdf-viewer_demo.webm"
               videoWidth={448}
               videoHeight="auto"
-              github="https://github.com/EGU1832/dual-pdf-viewer"
+              github="https://github.com/grapeve12/dual-pdf-viewer"
               readmeSummary={`v1.3.0 (Release) — Side-by-side PDF comparison with synchronized scrolling and advanced controls.`}
-              website="https://egu1832.github.io/dual-pdf-viewer/"
+              website="https://grapeve12.github.io/dual-pdf-viewer/"
             />
 
             {/* ===================== 3) Remote Scroll — Gesture Auto Scroller ===================== */}
@@ -283,7 +283,7 @@ export default function Home() {
               demoVideo="remote-scroll_demo.webm"
               videoWidth={448}
               videoHeight="auto"
-              github="https://github.com/EGU1832/remote-scroll"
+              github="https://github.com/grapeve12/remote-scroll"
               readmeSummary={`v0.1.1 (Release) — Foreground camera + accessibility service enabling gesture-based auto scrolling.`}
             />
           </div>
@@ -314,12 +314,12 @@ export default function Home() {
             <p>
               <span className="font-medium text-[#9fd3a8]">GitHub</span>:{" "}
               <a
-                href="https://github.com/EGU1832"
+                href="https://github.com/grapeve12"
                 target="_blank"
                 rel="noreferrer"
                 className="underline-offset-2 hover:underline"
               >
-                https://github.com/EGU1832
+                https://github.com/grapeve12
               </a>
             </p>
           </div>
@@ -328,7 +328,7 @@ export default function Home() {
         {/* ===== FOOTER ===== */}
         <footer className="mt-8 border-t border-[#4f6f58]/40 pt-4 text-xs text-[#9aa69c]">
           <p>
-            © {new Date().getFullYear()} EGU1832. Built with Next.js.
+            © {new Date().getFullYear()} SeoIm Choi. Built with Next.js.
             Theme inspired by calm green fields & a black cat.
           </p>
           <p className="mt-2">

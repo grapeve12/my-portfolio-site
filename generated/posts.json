@@ -69,17 +69,46 @@
     "sourcePath": "Published/Notes/CSE6449.md"
   },
   {
-    "slug": "projects/my-portfolio-site",
-    "title": "포트폴리오 사이트 프로젝트",
-    "description": "Obsidian과 GitHub을 연동하여 블로그 및 이력서 페이지를 자동화하는 시스템 구축 과정을 다룹니다. AI 기반의 프론트 매터 생성부터 GitHub Actions를 활용한 배포 파이프라인 설계까지의 기술적 구현 단계를 상세히 설명합니다.",
+    "slug": "projects/ai-inference-server",
+    "title": "AI Inference Server",
+    "description": "SQLAlchemy와 PostgreSQL을 기반으로 비동기 작업 처리 시스템을 구축하고, Redis와 RabbitMQ를 활용해 실시간 상태 업데이트 및 안정적인 배포 환경을 구현하는 과정을 다룹니다.",
     "tags": [
-      "Obsidian",
-      "GitHubActions",
-      "ContextEngineering",
-      "Automation"
+      "Python",
+      "SQLAlchemy",
+      "Redis",
+      "RabbitMQ",
+      "SSE"
     ],
     "category": "project",
-    "thumbnail": "../../Docs/Pasted%20image%2020260422204753.png",
-    "sourcePath": "Published/Projects/My portfolio site.md"
+    "sourcePath": "Published/Projects/ai-inference-server.md"
+  },
+  {
+    "slug": "projects/my-portfolio-site",
+    "title": "포트폴리오 사이트 구축",
+    "description": "웹 성능 최적화와 UI/UX 개선을 시작으로, Obsidian과 Github Actions를 활용한 개인 웹사이트의 자동화 및 기능 고도화 과정을 다룹니다.",
+    "tags": [
+      "WebPerformance",
+      "Obsidian",
+      "Automation",
+      "GithubActions",
+      "UIUX"
+    ],
+    "category": "project",
+    "thumbnail": "https://web.dev/static/articles/vitals/image/largest-contentful-paint-ea2e6ec5569b6.svg?hl=ko",
+    "sourcePath": "Published/Projects/my-portfolio-site.md"
+  },
+  {
+    "slug": "projects/rozzum-agent",
+    "title": "My AI Agent",
+    "description": "RVC 음성 변환 기술의 핵심 모델 포맷과 최적화 방법론을 다루며, OpenAI 호환 API 연동 및 원격 서버 접속을 위한 SSH 환경 설정까지 포괄적으로 설명합니다.",
+    "tags": [
+      "RVC",
+      "PyTorch",
+      "ONNX",
+      "OpenAIAPI",
+      "SSH"
+    ],
+    "category": "project",
+    "sourcePath": "Published/Projects/rozzum-agent.md"
   }
 ]
