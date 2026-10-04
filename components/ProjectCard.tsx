@@ -1,7 +1,6 @@
 // components/ProjectCard.tsx
 "use client";
 
-import Image from "next/image";
 import { useEffect, useRef, useState } from "react"
 import Card from "@/components/ui/Card";
 
@@ -9,7 +8,7 @@ type ProjectProps = {
   title: string;
   description: string;
   techBadges?: string[];
-  icon?: string;
+  icon?: boolean;
   demoVideo?: string;
   github?: string;
   readmeSummary?: string;
@@ -18,13 +17,22 @@ type ProjectProps = {
   videoHeight?: number | string;
 };
 
+/** "https://github.com/{owner}/{repo}" -> 해당 레포 기본 브랜치의 icon.png raw URL. */
+function getRepoIconUrl(githubUrl?: string): string | null {
+  if (!githubUrl) return null;
+  const match = githubUrl.match(/^https:\/\/github\.com\/([^/]+)\/([^/#?]+)/);
+  if (!match) return null;
+  const [, owner, repo] = match;
+  return `https://raw.githubusercontent.com/${owner}/${repo.replace(/\.git$/, "")}/HEAD/icon.png`;
+}
+
 function SmartMedia({ src, title, style }: any) {
   const videoRef = useRef<HTMLVideoElement | null>(null)
   const [isVisible, setIsVisible] = useState(false)
   const isVideo = src.endsWith(".mp4") || src.endsWith(".webm")
 
   // poster 경로 자동 생성
-  const baseName = src.replace(/\.(mp4|webm)$/i, "")
+  const baseName = src.replace(/\.(mp4|webm|webp)$/i, "")
 const posterSrc = `/projects/thumbs/${baseName}.webp`
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -56,7 +64,7 @@ const posterSrc = `/projects/thumbs/${baseName}.webp`
   if (!isVideo) {
     return (
       <img
-        src={`/projects/${src}`}
+        src={`/projects/thumbs/${src}`}
         alt={`${title} demo`}
         loading="lazy"
         style={style}
@@ -102,20 +110,22 @@ export default function ProjectCard({
     height: videoHeight ?? "auto",
   };
 
+  const [iconLoaded, setIconLoaded] = useState(false);
+  const [iconFailed, setIconFailed] = useState(false);
+  const iconUrl = icon !== false ? getRepoIconUrl(github) : null;
+
   return (
     <Card className="space-y-4">
 
       {/* 아이콘 */}
-      {icon && (
-        <div className="relative h-14 w-14">
-          <Image
-            src={`/projects/${icon}`}
-            alt={`${title} icon`}
-            fill
-            sizes="256px"
-            className="object-contain"
-          />
-        </div>
+      {iconUrl && !iconFailed && (
+        <img
+          src={iconUrl}
+          alt={`${title} icon`}
+          className={`h-14 w-14 object-contain ${iconLoaded ? "" : "hidden"}`}
+          onLoad={() => setIconLoaded(true)}
+          onError={() => setIconFailed(true)}
+        />
       )}
 
       {/* 타이틀 */}

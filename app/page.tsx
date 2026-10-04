@@ -207,13 +207,27 @@ export default function Home() {
                 "https://img.shields.io/badge/TypeScript-2F74C0?style=for-the-badge&logo=typescript&logoColor=white",
                 "https://img.shields.io/badge/FastAPI-05998B?style=for-the-badge&logo=fastapi&logoColor=white"
               ]}
-              demoVideo="FRIDAI_demo.png"
+              demoVideo="FRIDAI_demo.webp"
               videoWidth={540}
               videoHeight="auto"
-              icon="FRIDAI_icon.png"
               github="https://github.com/F-R-I-D-AI/dashboard-ui"
               website="https://fridai.vercel.app/"
               readmeSummary="v0.2.0 (Preview) — A two-stage image restoration service combining Retinexformer low-light enhancement and Real-ESRGAN super-resolution."
+            />
+
+            {/* ===================== 4) AI Inference Server ===================== */}
+            <ProjectCard
+              title="AI Inference Server"
+              description="Async job execution server built on Redis Queue, a dedicated Worker, and Pub/Sub-driven SSE for real-time status updates."
+              techBadges={[
+                "https://img.shields.io/badge/FastAPI-05998B?style=for-the-badge&logo=fastapi&logoColor=white",
+                "https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white",
+                "https://img.shields.io/badge/PostgreSQL-4169E1?style=for-the-badge&logo=postgresql&logoColor=white",
+                "https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white",
+              ]}
+              github="https://github.com/grapeve12/ai-inference-server"
+              website="/lab/inference-demo"
+              readmeSummary="Redis List(BLPOP) 기반 Job Queue, 재시도 로직을 갖춘 Worker, Pub/Sub으로 상태 변경을 실시간 SSE로 브로드캐스트하는 백엔드 아키텍처."
             />
 
           </div>
@@ -240,7 +254,6 @@ export default function Home() {
                 "https://img.shields.io/badge/Highlight.js-FFB000?style=for-the-badge&logo=javascript&logoColor=white",
                 "https://img.shields.io/badge/Markdown_it-000000?style=for-the-badge&logo=markdown&logoColor=white"
               ]}
-              icon="obsidian-to-github-md_icon.png"
               demoVideo="obsidian-to-github-md_demo.webm"
               videoWidth={448}
               videoHeight="auto"
@@ -259,7 +272,6 @@ export default function Home() {
                 "https://img.shields.io/badge/PDF.js-FF0000?style=for-the-badge&logo=mozilla&logoColor=white",
                 "https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=black",
               ]}
-              icon="dual-pdf-viewer_icon.png"
               demoVideo="dual-pdf-viewer_demo.webm"
               videoWidth={448}
               videoHeight="auto"
@@ -279,7 +291,6 @@ export default function Home() {
                 "https://img.shields.io/badge/Android_Studio-3DDC84?style=for-the-badge&logo=androidstudio&logoColor=white",
                 "https://img.shields.io/badge/Material_Design_3-4285F4?style=for-the-badge&logo=materialdesign&logoColor=white",
               ]}
-              icon="remote-scroll_icon.png"
               demoVideo="remote-scroll_demo.webm"
               videoWidth={448}
               videoHeight="auto"
