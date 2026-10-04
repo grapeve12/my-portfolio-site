@@ -113,6 +113,18 @@ export default function ProjectCard({
   const [iconLoaded, setIconLoaded] = useState(false);
   const [iconFailed, setIconFailed] = useState(false);
   const iconUrl = icon !== false ? getRepoIconUrl(github) : null;
+  const iconRef = useRef<HTMLImageElement>(null);
+
+  useEffect(() => {
+    // SSR 하이드레이션 전에 이미 끝나버린 load/error를 놓쳤을 경우를 보정한다:
+    // 서버가 내려준 HTML에 <img src>가 이미 박혀 있어서, 브라우저가 React의
+    // onLoad/onError가 붙기도 전에 작은 아이콘 로드를 끝내버릴 수 있다.
+    const el = iconRef.current;
+    if (el && el.complete) {
+      if (el.naturalWidth > 0) setIconLoaded(true);
+      else setIconFailed(true);
+    }
+  }, [iconUrl]);
 
   return (
     <Card className="space-y-4">
@@ -120,6 +132,7 @@ export default function ProjectCard({
       {/* 아이콘 */}
       {iconUrl && !iconFailed && (
         <img
+          ref={iconRef}
           src={iconUrl}
           alt={`${title} icon`}
           className={`h-14 w-14 object-contain ${iconLoaded ? "" : "hidden"}`}
