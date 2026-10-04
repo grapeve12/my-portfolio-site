@@ -316,10 +316,10 @@ export default function Home() {
             <p>
               <span className="font-medium text-[#9fd3a8]">Email</span>:{" "}
               <a
-                href="hanti1832@naver.com"
+                href="seoimchoii@gmail.com"
                 className="underline-offset-2 hover:underline"
               >
-                hanti1832@naver.com
+                seoimchoii@gmail.com
               </a>
             </p>
             <p>
